@@ -1,5 +1,7 @@
 # Lua Combine Mine
 
+Code structure based on the original Combine Mine source code.
+
 Recreation of the Half-Life 2 Combine Mine in Lua.
 
 Please regard the License!
