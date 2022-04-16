@@ -1,10 +1,10 @@
-hook.Add("GetPreferredCarryAngles", "CombineMineCarryAngles", function(ent, ply)
+hook.Add("GetPreferredCarryAngles", "LuaCombineMineCarryAngles", function(ent, ply)
     if ent:GetClass() != "lua_combine_mine" then return end
 
     return Angle(0, 0, 0)
 end)
 
-hook.Add("GravGunPunt", "CombineMineGravityPunted", function(ply, ent)
+hook.Add("GravGunPunt", "LuaCombineMineGravityPunted", function(ply, ent)
     if ent:GetClass() != "lua_combine_mine" then return end
 
     if ent:GetStatus() == MINE_STATE_TRIGGERED or ent:GetStatus() == MINE_STATE_ARMED then
@@ -26,7 +26,7 @@ hook.Add("GravGunPunt", "CombineMineGravityPunted", function(ply, ent)
     ent:SetNextThink(0.1)
 end)
 
-hook.Add("GravGunOnDropped", "CombineMineGravityDropped", function(ply, ent)
+hook.Add("GravGunOnDropped", "LuaCombineMineGravityDropped", function(ply, ent)
     if ent:GetClass() != "lua_combine_mine" then return end
 
     ent.flTimeGrabbed = 9999999999999999999
@@ -46,7 +46,7 @@ hook.Add("GravGunOnDropped", "CombineMineGravityDropped", function(ply, ent)
     ent:SetStatus(MINE_STATE_DEPLOY)
 end)
 
-hook.Add("GravGunOnPickedUp", "CombineMineGravityPickUp", function(ply, ent)
+hook.Add("GravGunOnPickedUp", "LuaCombineMineGravityPickUp", function(ply, ent)
     if ent:GetClass() != "lua_combine_mine" then return end
 
     ent.iFlipAttempts = 0

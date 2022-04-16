@@ -2,7 +2,7 @@ language.Add("lua_combine_mine", "Lua Combine Mine")
 
 local mat = Material("sprites/glow04_noz")
 
-hook.Add("PostDrawOpaqueRenderables", "CombineMineSprite", function()
+hook.Add("PostDrawOpaqueRenderables", "LuaCombineMineSprite", function()
     for k, v in ipairs(ents.FindByClass("lua_combine_mine")) do
         if !v:GetNWBool("light") then continue end
 
